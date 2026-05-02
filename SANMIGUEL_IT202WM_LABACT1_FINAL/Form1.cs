@@ -91,6 +91,7 @@ namespace SANMIGUEL_IT202WM_LABACT1_FINAL
                     standardfeelabel.Text = "P" + activerecord.GetStandardFee().ToString("N2");
                     servicechargelabel.Text = "P20.00";
                     totallabel.Text = "P" + activerecord.GetTotalAmount(0).ToString("N2");
+                    slotlabel.Text = activerecord.AssignedSlot;
                 }
                 catch { MessageBox.Show("Please ensure all fields are filled correctly."); }
             }
@@ -152,7 +153,7 @@ namespace SANMIGUEL_IT202WM_LABACT1_FINAL
             platenumlabel.Text = "";
             vehicleinfolabel.Text = "";
             durationlabel.Text = "";
-            assignedslottxt.Text = "";
+            slotlabel.Text = "";
             overtimefeelabel.Text = "";
 
             standardfeelabel.Text = "";
@@ -163,6 +164,16 @@ namespace SANMIGUEL_IT202WM_LABACT1_FINAL
             paymentamounttxt.Text = "";
             changelabel.Text = "";
             paymentandtransactionsrichtextbox.Clear();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void slotlabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
